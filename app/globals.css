@@ -1,4 +1,8 @@
-@import "tailwindcss";
+/* eslint-disable */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 
 /* 默认浅色模式 */
 :root {
