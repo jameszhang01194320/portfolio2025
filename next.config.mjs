@@ -1,11 +1,13 @@
-/** @type {import('next').NextConfig} */
+// next.config.mjs
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig = {
   output: 'export',
   images: {
     unoptimized: true,
   },
-  basePath: '/portfolio2025', // 这里改成你的 GitHub 仓库名
-  assetPrefix: '/portfolio2025',
+  basePath: isProd ? '/portfolio2025' : '',
+  assetPrefix: isProd ? '/portfolio2025/' : '',
 };
 
 export default nextConfig;
